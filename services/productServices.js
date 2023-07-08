@@ -15,6 +15,7 @@ exports.resizeProductsImages = asyncHandler(async (req, res, next) => {
   const { coverImage, images } = req.files;
   const coverImageFileName = `product-${uuidv4()}-${Date.now()}-cover.jpeg`;
   if (coverImage) {
+    print("cover image sent");
     await sharp(coverImage[0].buffer)
       .resize(2000, 1333)
       .toFormat("jpeg")
@@ -24,6 +25,7 @@ exports.resizeProductsImages = asyncHandler(async (req, res, next) => {
   }
 
   if (images) {
+    print("images sent");
     req.body.images = [];
     await Promise.all(
       images.map(async (img, index) => {
@@ -40,6 +42,7 @@ exports.resizeProductsImages = asyncHandler(async (req, res, next) => {
   }
   next();
 });
+
 const {
   deleteOne,
   updateOne,

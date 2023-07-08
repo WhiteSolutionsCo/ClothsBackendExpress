@@ -3,9 +3,9 @@ const express = require("express");
 const router = express.Router();
 
 const {
-  createProduct,
   uploadProductImages,
   resizeProductsImages,
+  createProduct,
 } = require("../services/productServices");
 
 router
