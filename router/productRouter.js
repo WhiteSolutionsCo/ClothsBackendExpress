@@ -7,9 +7,7 @@ const {
   resizeProductsImages,
   createProduct,
 } = require("../services/productServices");
-
 router
   .route("/")
   .post(uploadProductImages, resizeProductsImages, createProduct);
-
 module.exports = router;

@@ -12,7 +12,7 @@ const productSchema = mongo.Schema(
       required: [true, "price is required"],
       max: [2000000, "price is too high"],
     },
-    coverImage: { type: String, required: [true, "cover image is required"] },
+    imageCover: { type: String, required: [true, "cover image is required"] },
     images: [String],
   },
   { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }
