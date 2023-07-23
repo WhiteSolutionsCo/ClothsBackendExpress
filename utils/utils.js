@@ -18,7 +18,7 @@ exports.sendEmail = async (options) => {
   });
 
   const mailerOptions = {
-    from: "White shop <ibraheemelfakharany@gmail.com>",
+    from: "RoFashion <whiteSolutionsCo@gmail.com>",
     to: options.to,
     subject: options.subject,
     text: options.content,
