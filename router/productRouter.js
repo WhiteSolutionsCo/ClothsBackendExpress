@@ -11,10 +11,8 @@ const {
   updateProduct,
   deleteProduct,
 } = require("../services/productServices");
-router
-  .route("/")
-  .post(uploadProductImages, resizeProductsImages, createProduct)
-  .get(getAllProducts);
+// uploadProductImages, resizeProductsImages,
+router.route("/").post(createProduct).get(getAllProducts);
 router.route("/:id").get(getProduct).put(updateProduct).delete(deleteProduct);
 
 module.exports = router;
