@@ -14,7 +14,7 @@ const productSchema = mongo.Schema(
     },
     priceBefore: {
       type: Number,
-      required: [true, "price is required"],
+
       max: [2000000, "price is too high"],
     },
     images: [String],
