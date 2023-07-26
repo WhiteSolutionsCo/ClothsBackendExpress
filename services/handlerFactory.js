@@ -55,8 +55,8 @@ exports.getAll = (Model) =>
       .search()
       .filter()
       .limitFields()
-      .pagination(documentsCount)
-      .sort();
+      .sort()
+      .pagination(documentsCount);
 
     const { mongooseQuery, pagination } = apiFeatures;
     const results = await mongooseQuery;
